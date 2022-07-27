@@ -1,49 +1,42 @@
-import React,{useEffect} from 'react'
-
+import React, { useEffect, useState } from "react";
+import {getapi} from '../API/service';
 const Typelist = () => {
+  const [results, setresults] = useState();
+//   console.log(results);
 
-    function getapi()
-    {
-      // GET request for remote image in node.js
-  fetch('http://localhost:4000/doctor/category',{mode:'cors'}).then(function (res) {
-      console.log(res);
-     
+
+  useEffect(() => {
+    getapi().then((res) => {
+    //   console.log(res);
+      setresults(res.data);
     });
-    }
-  
-    useEffect(() => {
-      getapi()
-   
-    }, [])
+  }, []);
   return (
-    <div><table className="table">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-  )
-}
+    <div>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          { results ? results.map((it)=>{
+                return(
+                    <tr>
+                    <td>{it.type}</td>
+                    <td>Doe</td>
+                    <td><div><img src={`${it.img}`} alt="boohoo" className="img-responsive"/></div></td>
+                  </tr>
+                )
+          }) : null}
+  
 
-export default Typelist
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default Typelist;

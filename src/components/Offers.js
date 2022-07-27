@@ -3,24 +3,25 @@ import axios from 'axios';
 
 const Offers = () => {
 
-  function getapi()
-  {
-    // GET request for remote image in node.js
-axios({
-  method: 'get',
-  url: 'http://localhost:4000/doctor/category',
-  // responseType: 'stream'
-})
-  .then(function (res) {
-    console.log(res);
-   
-  });
-  }
+//   async function  getapi ()
+//   {
+//     // GET request for remote image in node.js
+// let d =await axios({
+//   method: 'get',
+//   url: 'http://localhost:4000/doctor/category',
+//   // responseType: 'stream'
+// })
+// return d;
+//   }
 
-  useEffect(() => {
-    getapi()
+//   useEffect(() => {
+//     getapi().then(
+//       (res)=>{
+//         console.log(res);
+//       }
+//     )
  
-  }, [])
+//   }, [])
   
   return (
     <div><table className="table">
