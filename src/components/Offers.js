@@ -1,20 +1,27 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
+import axios from 'axios';
 
-const Typelist = () => {
+const Offers = () => {
 
-    function getapi()
-    {
-      // GET request for remote image in node.js
-  fetch('http://localhost:4000/doctor/category',{mode:'cors'}).then(function (res) {
-      console.log(res);
-     
-    });
-    }
-  
-    useEffect(() => {
-      getapi()
+//   function getapi()
+//   {
+//     // GET request for remote image in node.js
+// axios({
+//   method: 'get',
+//   url: 'http://localhost:4000/doctor/category',
+//   // responseType: 'stream'
+// })
+//   .then(function (res) {
+//     console.log(res);
    
-    }, [])
+//   });
+//   }
+
+//   useEffect(() => {
+//     getapi()
+ 
+//   }, [])
+  
   return (
     <div><table className="table">
     <thead>
@@ -46,4 +53,4 @@ const Typelist = () => {
   )
 }
 
-export default Typelist
+export default Offers
