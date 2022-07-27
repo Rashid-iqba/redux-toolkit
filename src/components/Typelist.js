@@ -25,7 +25,7 @@ const Typelist = () => {
           { results ? results.map((it,i)=>{
                 return(
                     <tr key={i}>
-                    <td>{i+1}={it.type}</td>
+                    <td>{`${i+1} <=> ${it.type}`}</td>
                     <td>Doe</td>
                     <td><div><img src={`${it.img}`} alt="boohoo" className="img-responsive"/></div></td>
                   </tr>
