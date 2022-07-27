@@ -4,7 +4,7 @@ import axios from 'axios';
 const Offers = () => {
   const [results, setresults] = useState();
 
-    console.log(results);
+    // console.log(results);
 
   async function  getapi ()
   {
@@ -34,9 +34,9 @@ const Offers = () => {
           </tr>
         </thead>
         <tbody>
-          { results ? results.map((it)=>{
+          { results ? results.map((it,i)=>{
                 return(
-                    <tr>
+                    <tr key={i}>
                     <td>{it.type}</td>
                     <td>Doe</td>
                     <td><div><img src={`${it.img}`} alt="boohoo" className="img-responsive"/></div></td>

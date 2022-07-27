@@ -22,10 +22,10 @@ const Typelist = () => {
           </tr>
         </thead>
         <tbody>
-          { results ? results.map((it)=>{
+          { results ? results.map((it,i)=>{
                 return(
-                    <tr>
-                    <td>{it.type}</td>
+                    <tr key={i}>
+                    <td>{i+1}={it.type}</td>
                     <td>Doe</td>
                     <td><div><img src={`${it.img}`} alt="boohoo" className="img-responsive"/></div></td>
                   </tr>
