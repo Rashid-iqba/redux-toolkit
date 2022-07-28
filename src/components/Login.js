@@ -4,20 +4,11 @@ import "../css/login.css";
 const Login = () => {
   return (
     <>
-      <link
-        href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-        rel="stylesheet"
-        id="bootstrap-css"
-      />
+
       {/*---- Include the above in your HEAD tag --------*/}
       <title>My Awesome Login Page</title>
   
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-        crossOrigin="anonymous"
-      />
+
       {/*Coded with love by Mutiullah Samim*/}
       <div className="container h-100">
         <div className="d-flex justify-content-center h-100">

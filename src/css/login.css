@@ -4,13 +4,14 @@
         margin: 0;
         padding: 0;
         height: 100%;
-        background: #60a3bc !important;
+        background: linear-gradient(to bottom, #33ccff 0%,#49535a 100%) !important;
     }
     .user_card {
-        height: 400px;
-        width: 350px;
-        margin-top: auto;
-        margin-bottom: auto;
+        border-width:1%;
+        border-color: black;
+        height: 90%;
+        width: 30%;
+        margin: 10%;
         background: #f39c12;
         position: relative;
         display: flex;
