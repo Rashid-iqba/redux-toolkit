@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {getapi} from '../API/service';
+import {getapi} from '../../API/service';
 const Typelist = () => {
   const [results, setresults] = useState();
 //   console.log(results);
