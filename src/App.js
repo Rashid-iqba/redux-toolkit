@@ -10,7 +10,7 @@ const App = () => {
   // console.log(dispatch(incrementByAmount));
 return(
   <>
-  {/* <Login/> */}
+
 
   <div style={{flex: 1,flexDirection:"row"}}>
   <button onClick={() => dispatch(increment())} className="btn btn-primary" type="submit">Increment + </button>
