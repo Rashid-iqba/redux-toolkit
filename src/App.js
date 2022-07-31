@@ -1,22 +1,23 @@
-import React,{useState} from "react";
-import Login from "./components/Login";
-import Home from "./components/Home";
+import React from "react";
+
 
 import {useSelector,useDispatch} from "react-redux";
-import {Increment,Decrement } from "./reduxs/actions/index";
+import {increment, decrement, incrementByAmount} from "./reduxs/features/updownSlice"
 
 const App = () => {
-  const mystate = useSelector( (state) => state.changeTheNumber);
+  const count = useSelector((state) => state.counter.value)
   const dispatch = useDispatch();
-  // const [first, setfirst] = useState(0)
+  // console.log(dispatch(incrementByAmount));
 return(
   <>
   {/* <Login/> */}
 
   <div style={{flex: 1,flexDirection:"row"}}>
-  <button onClick={()=> dispatch(Increment())  } className="btn btn-primary" type="submit">Increment + </button>
-     <div>{mystate}</div>
-   <button onClick={()=> dispatch(Decrement()) } className="btn btn-primary" type="submit">Decrement - </button>
+  <button onClick={() => dispatch(increment())} className="btn btn-primary" type="submit">Increment + </button>
+     <div>{count}</div>
+   <button  onClick={() => dispatch(decrement())} className="btn btn-primary" type="submit">Decrement - </button>
+   <br />
+   <button onClick={() => dispatch(incrementByAmount())} className="btn btn-primary" type="submit">Increment = </button>
         
   </div>
   </>
